@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BlogSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+    <aside class="sidebar">
+        <a href="index.html" class="logo">BlogSpace<span>.</span></a>
+
+        <p class="sidebar-label">WORKSPACE</p>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link active">
+                <span>▦</span> Dashboard
+            </a>
+            <a href="index.html" class="sidebar-link">
+                <span>⌂</span> Home Page
+            </a>
+            <a href="create-blog.html" class="sidebar-link">
+                <span>＋</span> Create Blog
+            </a>
+            <a href="#profile" class="sidebar-link">
+                <span>👤</span> My Profile
+            </a>
+
+            <a href="#" class="sidebar-link" id="logoutBtn">
+                <span>↪</span> Logout
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>BlogSpace Creator</p>
+            <span>Frontend Demo</span>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-topbar">
+            <div>
+                <p class="eyebrow">YOUR WORKSPACE</p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <a href="create-blog.html" class="btn">
+                + Create New Blog
+            </a>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <p>MONDAY MOTIVATION</p>
+                <h2>Every great story starts with an idea.</h2>
+                <span>Write something meaningful and share it with the world.</span>
+            </div>
+            <div class="welcome-icon">✍️</div>
+        </section>
+
+        <!-- User Profile -->
+        <section class="posts-panel" id="profile">
+            <div class="posts-heading">
+                <div>
+                    <h2>My Profile</h2>
+                    <p>Your account information.</p>
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <p><strong>Name:</strong> <span id="profileName">Loading...</span></p>
+                <p><strong>Email:</strong> <span id="profileEmail">Loading...</span></p>
+            </div>
+        </section>
+
+        <!-- Blog statistics -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Total Blogs</span>
+                    <span class="stat-icon purple">▤</span>
+                </div>
+                <h2 id="totalBlogsCount">0</h2>
+                <p>All your blog posts</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Published</span>
+                    <span class="stat-icon green">✓</span>
+                </div>
+                <h2 id="publishedBlogsCount">0</h2>
+                <p>Published blog posts</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Drafts</span>
+                    <span class="stat-icon orange">✎</span>
+                </div>
+                <h2 id="draftBlogsCount">0</h2>
+                <p>Posts in progress</p>
+            </article>
+
+        </section>
+
+        <!-- Recent blog posts -->
+        <section class="posts-panel">
+            <div class="posts-heading">
+                <div>
+                    <h2>Recent Blog Posts</h2>
+                    <p>Manage your latest writing activity.</p>
+                </div>
+
+                <a href="create-blog.html" class="text-link">
+                    + New Post
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="posts-table">
+                    <thead>
+                        <tr>
+                            <th>Blog Title</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <!-- JavaScript will add saved blogs here -->
+                    <tbody id="dynamicDashboardBlogs">
+                        <tr>
+                            <td colspan="4">Loading your blogs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            BlogSpace Dashboard · Frontend Development Task
+        </footer>
+
+    </main>
+
+</body>
+</html>

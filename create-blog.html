@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog | BlogSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">BlogSpace</a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="create-blog.html" class="active">Create Blog</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Create Blog Section -->
+    <main class="create-blog-section">
+        <div class="create-blog-container">
+
+            <div class="create-blog-heading">
+                <p class="section-label">BLOG EDITOR</p>
+                <h1>Create a New Blog</h1>
+                <p>Share your ideas, knowledge, and stories with the world.</p>
+            </div>
+
+            <form id="createBlogForm" class="create-blog-form">
+
+                <!-- Blog Title -->
+                <div class="form-group">
+                    <label for="blogTitle">Blog Title *</label>
+                    <input
+                        type="text"
+                        id="blogTitle"
+                        placeholder="Enter your blog title"
+                        required
+                        maxlength="100"
+                    >
+                </div>
+
+                <!-- Category -->
+                <div class="form-group">
+                    <label for="blogCategory">Category *</label>
+                    <select id="blogCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Education">Education</option>
+                        <option value="Lifestyle">Lifestyle</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Health">Health</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Image URL -->
+                <div class="form-group">
+                    <label for="blogImage">Featured Image URL</label>
+                    <input
+                        type="url"
+                        id="blogImage"
+                        placeholder="https://example.com/image.jpg"
+                    >
+                    <small>Optional: paste a publicly accessible image URL.</small>
+                </div>
+
+                <!-- Blog Content -->
+                <div class="form-group">
+                    <label for="blogContent">Blog Content *</label>
+                    <textarea
+                        id="blogContent"
+                        rows="10"
+                        placeholder="Write your blog content here..."
+                        required
+                        minlength="20"
+                    ></textarea>
+                    <small>Write at least 20 characters.</small>
+                </div>
+
+                <!-- Message -->
+                <p id="blogMessage" class="blog-message" role="status"></p>
+
+                <!-- Buttons -->
+                <div class="blog-form-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">
+                        Cancel
+                    </a>
+
+                    <button
+                        type="button"
+                        id="saveDraftBtn"
+                        class="btn btn-secondary"
+                    >
+                        Save Draft
+                    </button>
+
+                    <button type="submit" class="btn btn-primary">
+                        Publish Blog
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BlogSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

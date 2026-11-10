@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BlogSpace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">BlogSpace<span>.</span></a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="register.html" class="btn btn-small">Create Account</a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <section class="auth-card">
+            <a href="index.html" class="back-link">← Back to Home</a>
+
+            <div class="auth-heading">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h1>Login to your account</h1>
+                <p>Continue discovering and sharing great stories.</p>
+            </div>
+
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail"
+                           placeholder="you@example.com" required>
+                    <small class="error-message" id="loginEmailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword"
+                           placeholder="Enter your password" required>
+                    <small class="error-message" id="loginPasswordError"></small>
+                </div>
+
+                <button type="submit" class="btn auth-submit">
+                    Login
+                </button>
+
+                <p id="loginMessage" class="form-message"
+                   aria-live="polite"></p>
+            </form>
+
+            <p class="auth-switch">
+                Don't have an account?
+                <a href="register.html">Register here</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">BlogSpace<span>.</span></a>
+        <p>© 2026 BlogSpace. Built for curious minds.</p>
+    </footer>
+
+</body>
+</html>
